@@ -11,8 +11,7 @@ analyzer = SentimentIntensityAnalyzer()
 # ---------------------
 def get_lunarcrush_data(symbol):
     API_KEY = "tilgcg4ksygfkrjm2cp334kqhjme72p9gclfp593m"
-url = f"https://lunarcrush.com/api/v2?data=assets&key={API_KEY}&symbol={symbol.upper()}&data_points=30"
-
+    url = f"https://lunarcrush.com/api/v2?data=assets&key={API_KEY}&symbol={symbol.upper()}&data_points=30"
     r = requests.get(url)
     if r.status_code != 200:
         return None
